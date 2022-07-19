@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "ProductsUI"
+  "cli": {
+    "analytics": false
+  }
 }
