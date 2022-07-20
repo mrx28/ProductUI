@@ -1,0 +1,30 @@
+<p-dataView
+[value]="products"
+[paginator]="true"
+[rows]="10"
+[sortField]="sortField"
+>
+  <ng-template pTemplate="header">
+    <p-dropdown
+      [options]="sortOptions"
+      [(ngModel)]="sortKey"
+      placeholder="Sortuj wg"
+      (onChange)="onSortChange($event)"
+      [style]="{'min-width:15em'}"
+      ></p-dropdown>
+  </ng-template>
+  <ng-template let-prd pTemplate="listItem">
+      <div>
+          {{prd.code}}
+      </div>
+  </ng-template>
+  <ng-template let-prd pTemplate="gritItem">
+    <div class="col-12 md:col-3">
+      {{prd.name}}
+    </div>
+  </ng-template>
+  <!-- <ng-template pTemplate="pagniatorleft" let-state>
+    {{state.first}}
+  </ng-template> -->
+
+</p-dataView>
